@@ -1,0 +1,59 @@
+app-id: io.github.beacn_on_linux.beacn-utility
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+command: beacn-utility
+
+finish-args:
+  # Device Access (USB for the Beacn Hardware, dri for OpenGL Rendering)
+  - --device=usb
+  - --device=dri
+  
+  # Basic permissions most apps need
+  - --socket=fallback-x11
+  - --socket=wayland
+
+  # System tray icon
+  - --talk-name=org.kde.StatusNotifierWatcher
+
+  # Watch for Lock / Unlock events
+  - --system-talk-name=org.freedesktop.login1
+
+  # Ability to check whether an autostart entry is present
+  # This is needed because there's no way to check via a portal
+  - --filesystem=xdg-config/autostart:ro
+
+modules:
+  - name: beacn-utility
+    buildsystem: simple
+    build-options:
+      # Note on this, while I understand `flatpak-cargo-generator` exists, it does exactly the same as what
+      # `cargo fetch --locked` does, which is download specific versions of the dependencies to create a reproducible
+      # build.
+      #
+      # The downside, is that `flatpak-cargo-generator` requires devs and one-time contributors of this rust project
+      # to not only have a python environment configured, but to remember to update the generated sources when the
+      # dependencies change. While CI could be setup to generate the file automatically, it just adds to the mess.
+      #
+      # So I'm just going to enable network access on the sandbox, and pull the dependencies using Cargo, which will
+      # create a reproducible build and 'just works' without any additional developer overhead.
+      build-args: ["--share=network"]
+      append-path: /usr/lib/sdk/rust-stable/bin
+      env:
+        CARGO_HOME: /run/build/beacn-utility/cargo
+    build-commands:
+      - cargo fetch --locked --verbose
+      - cargo build --locked --release --verbose
+      - install -Dm755 ./target/release/beacn-utility -t /app/bin/
+      - install -Dm644 resources/flatpak/io.github.beacn_on_linux.beacn-utility.metainfo.xml /app/share/metainfo/io.github.beacn_on_linux.beacn-utility.metainfo.xml
+      - install -Dm644 resources/flatpak/io.github.beacn_on_linux.beacn-utility.desktop /app/share/applications/io.github.beacn_on_linux.beacn-utility.desktop
+      - install -Dm644 resources/icons/beacn-utility.svg /app/share/icons/hicolor/scalable/apps/io.github.beacn_on_linux.beacn-utility.svg
+      - install -Dm644 resources/icons/beacn-utility-large.png /app/share/pixmaps/io.github.beacn_on_linux.beacn-utility.png
+      - install -Dm644 resources/icons/beacn-utility.png  /app/share/icons/hicolor/48x48/apps/io.github.beacn_on_linux.beacn-utility.png
+
+    sources:
+      - type: git
+        url: https://github.com/beacn-on-linux/beacn-utility
+        branch: main
