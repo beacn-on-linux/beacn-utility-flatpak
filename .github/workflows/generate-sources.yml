@@ -1,0 +1,47 @@
+name: Generate Cargo Dependency Sources
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [ update-generated-sources ]
+
+jobs:
+  update-generated-file:
+    name: Update Generated Sources File
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Setting up Python
+        run: |
+          pip install flatpak-cargo-generator
+
+      - name: Cloning Utility Repository
+        run: |
+          git clone https://github.com/beacn-on-linux/beacn-utility.git
+
+      - name: Generating file
+        run: |
+          cd beacn-utility
+          
+          # Generate the dependencies into the parent directory
+          flatpak-cargo-generator Cargo.lock -o ../generated-sources.json
+
+      - name: Commit and Push Changes
+        run: |
+          git add generated-sources.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          else
+            git commit -m "chore: update cargo dependencies"
+            git push
+          fi
