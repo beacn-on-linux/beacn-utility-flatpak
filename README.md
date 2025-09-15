@@ -29,6 +29,7 @@ flatpak install --user beacn-repo io.github.beacn_on_linux.beacn-utility
 ### Future Builds
 To update the installed package run the following:
 ```shell
+git pull  # Pull latest changes from this repo
 source ~/.python_beacn/bin/activate
 flatpak-builder --repo=beacn-repo --install-deps-from=flathub --force-clean build-dir io.github.beacn_on_linux.beacn-utility.yml
 flatpak update
