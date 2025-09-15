@@ -4,6 +4,10 @@ on:
   repository_dispatch:
     types: [ update-generated-sources ]
 
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   update-generated-file:
     name: Update Generated Sources File
