@@ -17,6 +17,12 @@
   <!-- When built via CI, the above tag doesn't seem to work -->
   <developer_name>The Beacn on Linux Team</developer_name>
 
+  <releases>
+      <release version="0.1.0" date="2024-09-23">
+          <description>Initial release</description>
+      </release>
+  </releases>
+
   <launchable type="desktop-id">io.github.beacn_on_linux.beacn-utility.desktop</launchable>
   <url type="homepage">https://github.com/beacn-on-linux</url>
   <url type="bugtracker">https://github.com/beacn-on-linux/beacn-utility/issues</url>
