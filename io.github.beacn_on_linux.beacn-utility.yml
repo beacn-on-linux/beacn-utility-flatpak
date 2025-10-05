@@ -10,7 +10,10 @@ finish-args:
   # Device Access (USB for the Beacn Hardware, dri for OpenGL Rendering)
   - --device=usb
   - --device=dri
-  
+
+  # Share the IPC Namespace with the Host
+  - --share=ipc
+
   # Basic permissions most apps need
   - --socket=fallback-x11
   - --socket=wayland
