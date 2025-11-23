@@ -1,4 +1,4 @@
-name: build.yml
+name: Publish Release Artifact
 on:
   push:
     tags:
