@@ -8,6 +8,8 @@ jobs:
   build_flatpak:
     name: "Create Flatpak Build"
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     env:
       GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
       VERSION_TAG: ${{ github.ref_name }}
