@@ -12,6 +12,9 @@ jobs:
       GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
       VERSION_TAG: ${{ github.ref_name }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: "Setup Flatpak"
         run: |
           sudo add-apt-repository -y ppa:flatpak/stable
