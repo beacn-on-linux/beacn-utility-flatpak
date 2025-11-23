@@ -32,11 +32,23 @@ modules:
   - name: beacn-utility
     buildsystem: simple
     build-options:
+      # Note on this, while I understand `flatpak-cargo-generator` exists, it does exactly the same as what
+      # `cargo fetch --locked` does, which is download specific versions of the dependencies to create a reproducible
+      # build.
+      #
+      # The downside, is that `flatpak-cargo-generator` requires devs and one-time contributors of this rust project
+      # to not only have a python environment configured, but to remember to update the generated sources when the
+      # dependencies change. While CI could be setup to generate the file automatically, it just adds to the mess.
+      #
+      # So I'm just going to enable network access on the sandbox, and pull the dependencies using Cargo, which will
+      # create a reproducible build and 'just works' without any additional developer overhead.
+      build-args: ["--share=network"]
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
         CARGO_HOME: /run/build/beacn-utility/cargo
     build-commands:
-      - cargo build --locked --release
+      - cargo fetch --locked --verbose
+      - cargo build --locked --release --verbose
       - install -Dm755 ./target/release/beacn-utility -t /app/bin/
       - install -Dm644 io.github.beacn_on_linux.beacn-utility.metainfo.xml /app/share/metainfo/io.github.beacn_on_linux.beacn-utility.metainfo.xml
       - install -Dm644 io.github.beacn_on_linux.beacn-utility.desktop /app/share/applications/io.github.beacn_on_linux.beacn-utility.desktop
@@ -57,4 +69,4 @@ modules:
       # instead I've had to spend many hours creating and testing multiple CI scripts to automate the updating of this
       # file to ensure there's no additional developer overhead when contributing code. There would be less pain if
       # network access was allowed during the build, but flathub doesn't allow it. Consider this comment a mini-protest.
-      - generated-sources.json
+      # - generated-sources.json
