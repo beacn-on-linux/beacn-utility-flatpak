@@ -14,6 +14,9 @@ finish-args:
   # Share the IPC Namespace with the Host
   - --share=ipc
 
+  # Network is needed so the Utility can communicate with Pipeweaver
+  - --share=network
+
   # Basic permissions most apps need
   - --socket=fallback-x11
   - --socket=wayland
@@ -60,6 +63,9 @@ modules:
       - type: git
         url: https://github.com/beacn-on-linux/beacn-utility
         tag: v0.1.1
+
+        # Uncomment this for testing against main, and comment the line above. Don't commit this change :D
+        #branch: main
       - type: file
         path: io.github.beacn_on_linux.beacn-utility.metainfo.xml
       - type: file
