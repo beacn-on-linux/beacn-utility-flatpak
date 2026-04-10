@@ -8,8 +8,8 @@
     {
         "type": "git",
         "url": "https://github.com/pipeweaver/pipeweaver",
-        "commit": "d902f16db21f2f8f7c286a53032a4c3d6e00a7c9",
-        "dest": "flatpak-cargo/git/pipeweaver-d902f16"
+        "commit": "2545cf349e80cc27afb70e5553e037095ab8680c",
+        "dest": "flatpak-cargo/git/pipeweaver-2545cf3"
     },
     {
         "type": "archive",
@@ -2190,14 +2190,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/gif/gif-0.14.1.crate",
-        "sha256": "f5df2ba84018d80c213569363bdcd0c64e6933c67fe4c1d60ecf822971a3c35e",
-        "dest": "cargo/vendor/gif-0.14.1"
+        "url": "https://static.crates.io/crates/gif/gif-0.14.2.crate",
+        "sha256": "ee8cfcc411d9adbbaba82fb72661cc1bcca13e8bba98b364e62b2dba8f960159",
+        "dest": "cargo/vendor/gif-0.14.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"f5df2ba84018d80c213569363bdcd0c64e6933c67fe4c1d60ecf822971a3c35e\", \"files\": {}}",
-        "dest": "cargo/vendor/gif-0.14.1",
+        "contents": "{\"package\": \"ee8cfcc411d9adbbaba82fb72661cc1bcca13e8bba98b364e62b2dba8f960159\", \"files\": {}}",
+        "dest": "cargo/vendor/gif-0.14.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2341,6 +2341,19 @@
         "type": "inline",
         "contents": "{\"package\": \"841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100\", \"files\": {}}",
         "dest": "cargo/vendor/hashbrown-0.16.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/hashbrown/hashbrown-0.17.0.crate",
+        "sha256": "4f467dd6dccf739c208452f8014c75c18bb8301b050ad1cfb27153803edb0f51",
+        "dest": "cargo/vendor/hashbrown-0.17.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"4f467dd6dccf739c208452f8014c75c18bb8301b050ad1cfb27153803edb0f51\", \"files\": {}}",
+        "dest": "cargo/vendor/hashbrown-0.17.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2671,14 +2684,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/indexmap/indexmap-2.13.1.crate",
-        "sha256": "45a8a2b9cb3e0b0c1803dbb0758ffac5de2f425b23c28f518faabd9d805342ff",
-        "dest": "cargo/vendor/indexmap-2.13.1"
+        "url": "https://static.crates.io/crates/indexmap/indexmap-2.14.0.crate",
+        "sha256": "d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9",
+        "dest": "cargo/vendor/indexmap-2.14.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"45a8a2b9cb3e0b0c1803dbb0758ffac5de2f425b23c28f518faabd9d805342ff\", \"files\": {}}",
-        "dest": "cargo/vendor/indexmap-2.13.1",
+        "contents": "{\"package\": \"d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9\", \"files\": {}}",
+        "dest": "cargo/vendor/indexmap-2.14.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3022,14 +3035,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/libredox/libredox-0.1.15.crate",
-        "sha256": "7ddbf48fd451246b1f8c2610bd3b4ac0cc6e149d89832867093ab69a17194f08",
-        "dest": "cargo/vendor/libredox-0.1.15"
+        "url": "https://static.crates.io/crates/libredox/libredox-0.1.16.crate",
+        "sha256": "e02f3bb43d335493c96bf3fd3a321600bf6bd07ed34bc64118e9293bdffea46c",
+        "dest": "cargo/vendor/libredox-0.1.16"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"7ddbf48fd451246b1f8c2610bd3b4ac0cc6e149d89832867093ab69a17194f08\", \"files\": {}}",
-        "dest": "cargo/vendor/libredox-0.1.15",
+        "contents": "{\"package\": \"e02f3bb43d335493c96bf3fd3a321600bf6bd07ed34bc64118e9293bdffea46c\", \"files\": {}}",
+        "dest": "cargo/vendor/libredox-0.1.16",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4114,12 +4127,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/pipeweaver-d902f16/ipc\" \"cargo/vendor/pipeweaver-ipc\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/pipeweaver-2545cf3/ipc\" \"cargo/vendor/pipeweaver-ipc\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"pipeweaver-ipc\"\nversion = \"0.1.1\"\nedition = \"2024\"\nauthors = [ \"Craig McLure <craig@mclure.net>\",]\nlicense = \"MIT\"\nrepository = \"https://github.com/pipeweaver/pipeweaver\"\nhomepage = \"https://pipeweaver.github.io/\"\n\n[dependencies]\nanyhow = \"1.0.102\"\njson-patch = \"4.1.0\"\nasync-trait = \"0.1.89\"\nfutures = \"0.3.32\"\n\n[dependencies.pipeweaver-shared]\npath = \"../shared\"\n\n[dependencies.pipeweaver-profile]\npath = \"../profile\"\n\n[dependencies.serde]\nversion = \"1.0.228\"\nfeatures = [ \"derive\",]\n\n[dependencies.interprocess]\nversion = \"2.4.0\"\nfeatures = [ \"tokio\",]\n\n[dependencies.ulid]\nversion = \"1.2.1\"\nfeatures = [ \"serde\",]\n\n[dependencies.enum-map]\nversion = \"2.7.3\"\nfeatures = [ \"serde\",]\n\n[dependencies.tokio-util]\nversion = \"0.7.18\"\nfeatures = [ \"codec\", \"compat\",]\n\n[dependencies.tokio-serde]\nversion = \"0.9.0\"\nfeatures = [ \"bincode\", \"json\",]\n\n[dependencies.reqwest]\nversion = \"0.13.2\"\ndefault-features = false\nfeatures = [ \"json\",]\n",
+        "contents": "[package]\nname = \"pipeweaver-ipc\"\nversion = \"0.1.2\"\nedition = \"2024\"\nauthors = [ \"Craig McLure <craig@mclure.net>\",]\nlicense = \"MIT\"\nrepository = \"https://github.com/pipeweaver/pipeweaver\"\nhomepage = \"https://pipeweaver.github.io/\"\n\n[dependencies]\nanyhow = \"1.0.102\"\njson-patch = \"4.1.0\"\nasync-trait = \"0.1.89\"\nfutures = \"0.3.32\"\n\n[dependencies.pipeweaver-shared]\npath = \"../shared\"\n\n[dependencies.pipeweaver-profile]\npath = \"../profile\"\n\n[dependencies.serde]\nversion = \"1.0.228\"\nfeatures = [ \"derive\",]\n\n[dependencies.interprocess]\nversion = \"2.4.0\"\nfeatures = [ \"tokio\",]\n\n[dependencies.ulid]\nversion = \"1.2.1\"\nfeatures = [ \"serde\",]\n\n[dependencies.enum-map]\nversion = \"2.7.3\"\nfeatures = [ \"serde\",]\n\n[dependencies.tokio-util]\nversion = \"0.7.18\"\nfeatures = [ \"codec\", \"compat\",]\n\n[dependencies.tokio-serde]\nversion = \"0.9.0\"\nfeatures = [ \"bincode\", \"json\",]\n\n[dependencies.reqwest]\nversion = \"0.13.2\"\ndefault-features = false\nfeatures = [ \"json\",]\n",
         "dest": "cargo/vendor/pipeweaver-ipc",
         "dest-filename": "Cargo.toml"
     },
@@ -4132,12 +4145,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/pipeweaver-d902f16/profile\" \"cargo/vendor/pipeweaver-profile\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/pipeweaver-2545cf3/profile\" \"cargo/vendor/pipeweaver-profile\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"pipeweaver-profile\"\nversion = \"0.1.1\"\nedition = \"2024\"\nauthors = [ \"Craig McLure <craig@mclure.net>\",]\nlicense = \"MIT\"\nrepository = \"https://github.com/pipeweaver/pipeweaver\"\nhomepage = \"https://pipeweaver.github.io/\"\n\n[dependencies.pipeweaver-shared]\npath = \"../shared\"\n\n[dependencies.serde]\nversion = \"1.0.228\"\nfeatures = [ \"derive\",]\n\n[dependencies.ulid]\nversion = \"1.2.1\"\nfeatures = [ \"serde\",]\n\n[dependencies.enum-map]\nversion = \"2.7.3\"\nfeatures = [ \"serde\",]\n",
+        "contents": "[package]\nname = \"pipeweaver-profile\"\nversion = \"0.1.2\"\nedition = \"2024\"\nauthors = [ \"Craig McLure <craig@mclure.net>\",]\nlicense = \"MIT\"\nrepository = \"https://github.com/pipeweaver/pipeweaver\"\nhomepage = \"https://pipeweaver.github.io/\"\n\n[dependencies.pipeweaver-shared]\npath = \"../shared\"\n\n[dependencies.serde]\nversion = \"1.0.228\"\nfeatures = [ \"derive\",]\n\n[dependencies.ulid]\nversion = \"1.2.1\"\nfeatures = [ \"serde\",]\n\n[dependencies.enum-map]\nversion = \"2.7.3\"\nfeatures = [ \"serde\",]\n",
         "dest": "cargo/vendor/pipeweaver-profile",
         "dest-filename": "Cargo.toml"
     },
@@ -4150,12 +4163,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/pipeweaver-d902f16/shared\" \"cargo/vendor/pipeweaver-shared\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/pipeweaver-2545cf3/shared\" \"cargo/vendor/pipeweaver-shared\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"pipeweaver-shared\"\nversion = \"0.1.1\"\nedition = \"2024\"\nauthors = [ \"Craig McLure <craig@mclure.net>\",]\nlicense = \"MIT\"\nrepository = \"https://github.com/pipeweaver/pipeweaver\"\nhomepage = \"https://pipeweaver.github.io/\"\n\n[dependencies]\nstrum_macros = \"0.28.0\"\n\n[dependencies.clap]\nversion = \"4.6.0\"\nfeatures = [ \"derive\",]\n\n[dependencies.serde]\nversion = \"1.0.228\"\nfeatures = [ \"derive\",]\n\n[dependencies.ulid]\nversion = \"1.2.1\"\nfeatures = [ \"serde\",]\n\n[dependencies.enum-map]\nversion = \"2.7.3\"\nfeatures = [ \"serde\",]\n\n[dependencies.strum]\nversion = \"0.28.0\"\n",
+        "contents": "[package]\nname = \"pipeweaver-shared\"\nversion = \"0.1.2\"\nedition = \"2024\"\nauthors = [ \"Craig McLure <craig@mclure.net>\",]\nlicense = \"MIT\"\nrepository = \"https://github.com/pipeweaver/pipeweaver\"\nhomepage = \"https://pipeweaver.github.io/\"\n\n[dependencies]\nstrum_macros = \"0.28.0\"\n\n[dependencies.clap]\nversion = \"4.6.0\"\nfeatures = [ \"derive\",]\n\n[dependencies.serde]\nversion = \"1.0.228\"\nfeatures = [ \"derive\",]\n\n[dependencies.ulid]\nversion = \"1.2.1\"\nfeatures = [ \"serde\",]\n\n[dependencies.enum-map]\nversion = \"2.7.3\"\nfeatures = [ \"serde\",]\n\n[dependencies.strum]\nversion = \"0.28.0\"\n",
         "dest": "cargo/vendor/pipeweaver-shared",
         "dest-filename": "Cargo.toml"
     },
@@ -4610,14 +4623,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/redox_syscall/redox_syscall-0.7.3.crate",
-        "sha256": "6ce70a74e890531977d37e532c34d45e9055d2409ed08ddba14529471ed0be16",
-        "dest": "cargo/vendor/redox_syscall-0.7.3"
+        "url": "https://static.crates.io/crates/redox_syscall/redox_syscall-0.7.4.crate",
+        "sha256": "f450ad9c3b1da563fb6948a8e0fb0fb9269711c9c73d9ea1de5058c79c8d643a",
+        "dest": "cargo/vendor/redox_syscall-0.7.4"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"6ce70a74e890531977d37e532c34d45e9055d2409ed08ddba14529471ed0be16\", \"files\": {}}",
-        "dest": "cargo/vendor/redox_syscall-0.7.3",
+        "contents": "{\"package\": \"f450ad9c3b1da563fb6948a8e0fb0fb9269711c9c73d9ea1de5058c79c8d643a\", \"files\": {}}",
+        "dest": "cargo/vendor/redox_syscall-0.7.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5468,14 +5481,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tokio/tokio-1.51.0.crate",
-        "sha256": "2bd1c4c0fc4a7ab90fc15ef6daaa3ec3b893f004f915f2392557ed23237820cd",
-        "dest": "cargo/vendor/tokio-1.51.0"
+        "url": "https://static.crates.io/crates/tokio/tokio-1.51.1.crate",
+        "sha256": "f66bf9585cda4b724d3e78ab34b73fb2bbaba9011b9bfdf69dc836382ea13b8c",
+        "dest": "cargo/vendor/tokio-1.51.1"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"2bd1c4c0fc4a7ab90fc15ef6daaa3ec3b893f004f915f2392557ed23237820cd\", \"files\": {}}",
-        "dest": "cargo/vendor/tokio-1.51.0",
+        "contents": "{\"package\": \"f66bf9585cda4b724d3e78ab34b73fb2bbaba9011b9bfdf69dc836382ea13b8c\", \"files\": {}}",
+        "dest": "cargo/vendor/tokio-1.51.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
