@@ -62,7 +62,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/beacn-on-linux/beacn-utility
-        tag: v0.1.1
+        tag: v0.2.0
 
         # Uncomment this for testing against main, and comment the line above. Don't commit this change :D
         #branch: main
@@ -71,8 +71,4 @@ modules:
       - type: file
         path: io.github.beacn_on_linux.beacn-utility.desktop
 
-      # This is somewhat obnoxious, *EXACTLY* the same behaviour can be achieved with `cargo fetch --locked`, but
-      # instead I've had to spend many hours creating and testing multiple CI scripts to automate the updating of this
-      # file to ensure there's no additional developer overhead when contributing code. There would be less pain if
-      # network access was allowed during the build, but flathub doesn't allow it. Consider this comment a mini-protest.
       # - generated-sources.json

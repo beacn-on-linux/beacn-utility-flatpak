@@ -18,6 +18,14 @@
   <developer_name>The Beacn on Linux Team</developer_name>
 
   <releases>
+      <release version="0.2.0" date="2026-04-21" urgency="medium">
+        <description>
+          <ul>
+            <li>Added Beacn Mix and Mix Create Support via Pipeweaver</li>
+            <li>Various bug fixes and internal improvements</li>
+          </ul>
+        </description>
+      </release>
       <release version="0.1.1" date="2025-10-05">
           <description>Fixes a crash on launch in some configurations</description>
       </release>
