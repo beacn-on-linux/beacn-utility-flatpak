@@ -2,8 +2,8 @@
     {
         "type": "git",
         "url": "https://github.com/beacn-on-linux/beacn-lib",
-        "commit": "fb8307858e860b4f52866195b961b509d9088f9b",
-        "dest": "flatpak-cargo/git/beacn-lib-fb83078"
+        "commit": "d7b7ab71962803fbd9362b2d80a7c5cd650b16c3",
+        "dest": "flatpak-cargo/git/beacn-lib-d7b7ab7"
     },
     {
         "type": "git",
@@ -573,12 +573,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/beacn-lib-fb83078/.\" \"cargo/vendor/beacn-lib\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/beacn-lib-d7b7ab7/.\" \"cargo/vendor/beacn-lib\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"beacn-lib\"\nversion = \"0.1.5\"\nedition = \"2024\"\n\n[dependencies]\nenum-map = \"2.7.3\"\nbyteorder = \"1.5.0\"\nlog = \"0.4.29\"\nanyhow = \"1.0.102\"\nrusb = \"0.9.4\"\ncrossbeam = \"0.8.4\"\njpeg-decoder = \"0.3.2\"\nthiserror = \"2.0.18\"\n\n[dependencies.strum]\nversion = \"0.28.0\"\nfeatures = [ \"strum_macros\", \"derive\",]\n",
+        "contents": "[package]\nname = \"beacn-lib\"\nversion = \"0.1.6\"\nedition = \"2024\"\n\n[dependencies]\nenum-map = \"2.7.3\"\nbyteorder = \"1.5.0\"\nlog = \"0.4.29\"\nanyhow = \"1.0.102\"\nrusb = \"0.9.4\"\ncrossbeam = \"0.8.4\"\njpeg-decoder = \"0.3.2\"\nthiserror = \"2.0.18\"\n\n[dependencies.strum]\nversion = \"0.28.0\"\nfeatures = [ \"strum_macros\", \"derive\",]\n",
         "dest": "cargo/vendor/beacn-lib",
         "dest-filename": "Cargo.toml"
     },
@@ -7274,7 +7274,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/beacn-on-linux/beacn-lib\"]\ngit = \"https://github.com/beacn-on-linux/beacn-lib\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.1.5\"\n\n[source.\"https://github.com/pipeweaver/pipeweaver\"]\ngit = \"https://github.com/pipeweaver/pipeweaver\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.1.5\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/beacn-on-linux/beacn-lib\"]\ngit = \"https://github.com/beacn-on-linux/beacn-lib\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.1.6\"\n\n[source.\"https://github.com/pipeweaver/pipeweaver\"]\ngit = \"https://github.com/pipeweaver/pipeweaver\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.1.5\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
