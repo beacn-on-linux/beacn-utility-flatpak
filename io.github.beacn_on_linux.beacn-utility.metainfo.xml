@@ -18,6 +18,15 @@
   <developer_name>The Beacn on Linux Team</developer_name>
 
   <releases>
+      <release version="0.2.1" date="2026-04-21" urgency="medium">
+        <description>
+          <ul>
+            <li>Added Metering support to Mix / Mix Create</li>
+            <li>Recoloured the Mix / Mix Create UI</li>
+            <li>Various bug fixes and internal improvements</li>
+          </ul>
+        </description>
+      </release>
       <release version="0.2.0" date="2026-04-21" urgency="medium">
         <description>
           <ul>
