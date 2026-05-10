@@ -18,6 +18,15 @@
   <developer_name>The Beacn on Linux Team</developer_name>
 
   <releases>
+      <release version="0.2.3" date="2026-05-10" urgency="medium">
+        <description>
+          <ul>
+            <li>Added 'Hold Dial' to switch to Pipewaver Targets</li>
+            <li>When desktop is locked, adjustments will turn the device back on for 5 seconds</li>
+            <li>Fixed shutdown crash when more than one control device is connected</li>
+          </ul>
+        </description>
+      </release>
       <release version="0.2.2" date="2026-05-08" urgency="medium">
         <description>
           <ul>
