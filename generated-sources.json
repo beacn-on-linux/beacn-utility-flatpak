@@ -2,8 +2,8 @@
     {
         "type": "git",
         "url": "https://github.com/beacn-on-linux/beacn-lib",
-        "commit": "521cb677e2c851a6be6ebd6cac3fb4c886921f00",
-        "dest": "flatpak-cargo/git/beacn-lib-521cb67"
+        "commit": "d95557e64ab091effdc0487b988b27ff6c2cc245",
+        "dest": "flatpak-cargo/git/beacn-lib-d95557e"
     },
     {
         "type": "git",
@@ -573,7 +573,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/beacn-lib-521cb67/.\" \"cargo/vendor/beacn-lib\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/beacn-lib-d95557e/.\" \"cargo/vendor/beacn-lib\""
         ]
     },
     {
