@@ -18,7 +18,7 @@
   <developer_name>The Beacn on Linux Team</developer_name>
 
   <releases>
-      <release version="0.2.4" date="2026-07-23" urgency="medium">
+      <release version="0.2.5" date="2026-07-23" urgency="medium">
         <description>
           <ul>
             <li>Fixed stability issues when connecting to Pipeweaver</li>
