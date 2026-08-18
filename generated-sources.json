@@ -1365,6 +1365,32 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/dlopen2/dlopen2-0.9.0.crate",
+        "sha256": "60768c353d76ba6dd1b6332a5dbbdd3bc2dddadc2935f4cc6a9d0f17ca8ecb6a",
+        "dest": "cargo/vendor/dlopen2-0.9.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"60768c353d76ba6dd1b6332a5dbbdd3bc2dddadc2935f4cc6a9d0f17ca8ecb6a\", \"files\": {}}",
+        "dest": "cargo/vendor/dlopen2-0.9.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/dlopen2_derive/dlopen2_derive-0.5.0.crate",
+        "sha256": "1aacdd87ba97c2f83ff479e881e547f776b0a7c42921be22d4391f32b6284050",
+        "dest": "cargo/vendor/dlopen2_derive-0.5.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"1aacdd87ba97c2f83ff479e881e547f776b0a7c42921be22d4391f32b6284050\", \"files\": {}}",
+        "dest": "cargo/vendor/dlopen2_derive-0.5.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/dlv-list/dlv-list-0.5.2.crate",
         "sha256": "442039f5147480ba31067cb00ada1adae6892028e40e45fc5de7b7df6dcc1b5f",
         "dest": "cargo/vendor/dlv-list-0.5.2"
