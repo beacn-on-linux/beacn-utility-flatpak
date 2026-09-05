@@ -31,6 +31,9 @@ finish-args:
   # This is needed because there's no way to check via a portal
   - --filesystem=xdg-config/autostart:ro
 
+  # Allow the app to access pipewire for recording / playback streams
+  - --filesystem=xdg-run/pipewire-0
+
 modules:
   - name: beacn-utility
     buildsystem: simple
