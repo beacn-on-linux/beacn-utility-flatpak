@@ -18,6 +18,13 @@
   <developer_name>The Beacn on Linux Team</developer_name>
 
   <releases>
+      <release version="0.3.0" date="2026-09-06" urgency="medium">
+          <description>
+              <ul>
+                  <li>Major Release with many changes, check GitHub for details</li>
+              </ul>
+          </description>
+      </release>
       <release version="0.2.5" date="2026-07-23" urgency="medium">
         <description>
           <ul>
